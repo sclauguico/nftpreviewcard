@@ -1,0 +1,149 @@
+/* font-family: 'Outfit', sans-serif; */
+
+:root {
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --darkest-blue-shadow: hsl(216, 77%, 7%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-dark-blue-main-bg);
+  font-family: "Outfit", sans-serif;
+}
+
+.card-container {
+  width: 25rem;
+  height: 42rem;
+  background-color: var(--very-dark-blue-card-bg);
+  /* margin: 150px auto; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 12px 5px var(--darkest-blue-shadow);
+}
+
+.image-container {
+  border-radius: 0.7rem;
+}
+
+.main-image {
+  display: block;
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
+.invisible-container {
+  background-color: hsla(178, 100%, 50%, 0.5);
+  background-image: url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem;
+  transform: translate(0, -100%);
+  display: none;
+}
+
+.image-container:hover .invisible-container {
+  display: block;
+  cursor: pointer;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: var(--soft-blue);
+}
+
+.main-text {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.main-text:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eth {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.availability-period {
+  display: flex;
+  gap: 0.5rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.eth-price {
+  text-transform: uppercase;
+  color: var(--cyan);
+  font-size: 1.1rem;
+}
+
+.days-left {
+  font-size: 1.1rem;
+}
+
+hr {
+  margin-top: 1rem;
+  background-color: var(--very-dark-blue-blue-line);
+  height: 0.1rem;
+  border: none;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.creator-image {
+  width: 12%;
+  border: 2px solid var(--white);
+  border-radius: 200px;
+}
+
+.creator {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.creator-name {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.creator-name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
